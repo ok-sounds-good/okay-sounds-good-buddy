@@ -1,0 +1,56 @@
+[project]
+name = "okay-sounds-good-buddy"
+version = "0.1.0"
+description = "Okay, Sounds Good Karaoke workflow helper"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.14"
+keywords = ["karaoke", "cdg", "media", "workflow"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.14",
+]
+dependencies = [
+    "pillow",
+]
+
+[project.scripts]
+oksg = "oksg_buddy.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/oksg_buddy"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/CHANGELOG.md",
+    "/CONTRIBUTING.md",
+    "/LICENSE",
+    "/README.md",
+    "/pyproject.toml",
+    "/src",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py314"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I", "D100", "D101", "D102", "D104"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["D100", "D101", "D102", "D104"]
+
+[tool.ruff.format]
+docstring-code-format = true
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.6.0",
+    "ruff>=0.15.21",
+]

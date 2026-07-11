@@ -1,0 +1,46 @@
+__pycache__/
+*.py[cod]
+*$py.class
+.DS_Store
+.AppleDouble
+Thumbs.db
+Desktop.ini
+.venv/
+.uv-cache/
+.coverage
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.idea/
+.vscode/
+*.swp
+docs/handoffs/
+.config.toml
+.repair-backups/
+assets/*
+!assets/.gitkeep
+
+# Generated creator media and workflow output.
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.cdg
+*.mp3
+*.mp4
+*.mov
+*.m4a
+*.wav
+*.webm
+Thumbnail.png
+* - retro.png
+* - classic.png
+* - typewriter.png
+OKSG_STATUS.md
+YOUTUBE.md
+
+# Local build output.
+build/
+dist/
+*.egg-info/

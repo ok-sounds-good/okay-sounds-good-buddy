@@ -1,0 +1,13 @@
+[workspace]
+karaoke_root = "/path/to/Karaoke"
+shared_folder = "/path/to/OKSG Karaoke"
+# Use an absolute path. The default is a gitignored folder beside this repository.
+repair_backup_dir = "/absolute/path/to/repository/.repair-backups"
+
+[branding]
+creator_code = "OKSG"
+creator_name = "Okay, Sounds Good Karaoke"
+
+[assets]
+logo_path = ""
+font_dirs = []

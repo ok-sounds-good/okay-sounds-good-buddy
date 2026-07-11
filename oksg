@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+ENTRYPOINT="$SCRIPT_DIR/.venv/bin/oksg"
+
+if [[ ! -x "$ENTRYPOINT" ]]; then
+  echo "OKSG environment is not ready. Run: (cd \"$SCRIPT_DIR\" && uv sync)" >&2
+  exit 1
+fi
+
+exec "$ENTRYPOINT" "$@"
